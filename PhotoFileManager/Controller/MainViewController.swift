@@ -8,16 +8,41 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    private var picturesManager = PicturesManager()
+    
     override func loadView() {
-        view = MainView()
+        let mainView = MainView()
+        mainView.photosTableView.dataSource = self
+        mainView.photosTableView.delegate = self
+        view = mainView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        picturesManager.pictures.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MainView.tableCellIdentifier, for: indexPath)
+        
+        if #available(iOS 14, *) {
+            var config = cell.defaultContentConfiguration()
+            config.text = picturesManager.pictures[indexPath.row]
+            cell.contentConfiguration = config
+        } else {
+            cell.textLabel?.text = picturesManager.pictures[indexPath.row]
+        }
+        
+        return cell
+    }
+}
+
+extension MainViewController: UITableViewDelegate {
+    
+}
