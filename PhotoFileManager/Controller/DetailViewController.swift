@@ -9,6 +9,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
     var imagePath: String?
+    var imageNumber: Int?
+    var imageCount: Int?
     
     override func loadView() {
         let rootView = DetailView()
@@ -20,7 +22,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        title = imagePath
+        title = "Picture \(imageNumber ?? 0) of \(imageCount ?? 0)"
         navigationItem.largeTitleDisplayMode = .never
     }
     

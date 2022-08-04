@@ -28,5 +28,7 @@ struct PicturesManager {
         } catch {
             print(error.localizedDescription)
         }
+        
+        pictures.sort { $0 < $1 }
     }
 }

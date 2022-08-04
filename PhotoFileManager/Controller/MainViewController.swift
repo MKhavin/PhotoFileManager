@@ -37,9 +37,11 @@ extension MainViewController: UITableViewDataSource {
         if #available(iOS 14, *) {
             var config = cell.defaultContentConfiguration()
             config.text = picturesManager.pictures[indexPath.row]
+            config.textProperties.font = .systemFont(ofSize: 20)
             cell.contentConfiguration = config
         } else {
             cell.textLabel?.text = picturesManager.pictures[indexPath.row]
+            cell.textLabel?.font = .systemFont(ofSize: 20)
         }
         
         cell.accessoryType = .disclosureIndicator
@@ -54,6 +56,9 @@ extension MainViewController: UITableViewDelegate {
         
         let detailView = DetailViewController()
         detailView.imagePath = picturesManager.pictures[indexPath.row]
+        detailView.imageCount = picturesManager.pictures.count
+        detailView.imageNumber = indexPath.row + 1
+        
         navigationController?.pushViewController(detailView, animated: true)
     }
 }
