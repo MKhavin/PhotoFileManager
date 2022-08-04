@@ -20,6 +20,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        title = "Storm Viewer"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
@@ -39,10 +42,18 @@ extension MainViewController: UITableViewDataSource {
             cell.textLabel?.text = picturesManager.pictures[indexPath.row]
         }
         
+        cell.accessoryType = .disclosureIndicator
+        
         return cell
     }
 }
 
 extension MainViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let detailView = DetailViewController()
+        detailView.imagePath = picturesManager.pictures[indexPath.row]
+        navigationController?.pushViewController(detailView, animated: true)
+    }
 }

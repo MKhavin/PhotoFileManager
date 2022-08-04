@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5144BFA2289B31BC00882352 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5144BFA1289B31BC00882352 /* DetailViewController.swift */; };
+		5144BFA4289B321400882352 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5144BFA3289B321400882352 /* DetailView.swift */; };
 		51B4C7D02899C9860081BA4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4C7CF2899C9860081BA4C /* AppDelegate.swift */; };
 		51B4C7D22899C9860081BA4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4C7D12899C9860081BA4C /* SceneDelegate.swift */; };
 		51B4C7D42899C9860081BA4C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4C7D32899C9860081BA4C /* MainViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		5144BFA1289B31BC00882352 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5144BFA3289B321400882352 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		51B4C7CC2899C9860081BA4C /* PhotoFileManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFileManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B4C7CF2899C9860081BA4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51B4C7D12899C9860081BA4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				51B4C7E52899CAF10081BA4C /* MainView.swift */,
+				5144BFA3289B321400882352 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				51B4C7D42899C9860081BA4C /* MainViewController.swift in Sources */,
 				51B4C7E62899CAF10081BA4C /* MainView.swift in Sources */,
 				51B4C7D02899C9860081BA4C /* AppDelegate.swift in Sources */,
+				5144BFA4289B321400882352 /* DetailView.swift in Sources */,
 				5144BFA2289B31BC00882352 /* DetailViewController.swift in Sources */,
 				51B4C7EC2899CE7B0081BA4C /* PicturesManager.swift in Sources */,
 				51B4C7D22899C9860081BA4C /* SceneDelegate.swift in Sources */,
